@@ -1,48 +1,46 @@
-# stegage
+## stegage
 
 **stegage** is a simple command line tool and Go library to both encrypt
 (with [age](https://age-encryption.org/v1)) and conceal
 (with [steganography](https://github.com/auyer/steganography)) a file.
 
-#
 
 | Original image             |Encoded image with the encrypted file inside |
 | -------------------- | ------------------|
 | ![Original File](testdata/stegage.jpeg)  | ![Encoded File](testdata/stegage_encoded.png)
 
+## How it works
 
-# How it works
-
-## encode
+### encode
 
 **stegage** encrypts a file (f.ex. `doc.txt`) with a passphrase and embeds the
 encrypted file inside an image (f.ex. `stegage.jpeg`. The resulting image `stegage_encoded.png` is
 visually identical to the original image `stegage.jpeg`.
 
-    ┌────────────┐                               ┌────────────┐
-    │    doc.txt │         encrypt               │ doc.txt.enc│
-    │            ├──────────────────────────────►│            ├──────┐
-    │            │                               │            │      │                ┌─────────────────────────────────┐
-    │            │                               │            │      │                │              stegage_encoded.png│
-    └────────────┘                               └────────────┘      │                │                                 │
-                                                                     │ steganography  │                                 │
-                            ┌─────────────────────────────────┐      ├───────────────►│   ┌────────────┐                │
-                            │                    stegage.jpeg │      │                │   │ doc.txt.enc│                │
-                            │                                 │      │                │   │            │                │
-                            │                                 │      │                │   │            │                │
-                            │                                 │      │                │   │            │                │
-                            │                                 │      │                │   └────────────┘                │
-                            │                                 ├──────┘                │                                 │
-                            │                                 │                       └─────────────────────────────────┘
-                            │                                 │
-                            │                                 │
-                            │                                 │
-                            └─────────────────────────────────┘
+    ┌────────────┐                       ┌────────────┐
+    │    doc.txt │        encrypt        │ doc.txt.enc│
+    │            ├──────────────────────►│            ├─────┐
+    │            │                       │            │     │                ┌─────────────────────────────────┐
+    │            │                       │            │     │                │              stegage_encoded.png│
+    └────────────┘                       └────────────┘     │                │                                 │
+                                                            │ steganography  │                                 │
+                    ┌─────────────────────────────────┐     ├───────────────►│   ┌────────────┐                │
+                    │                    stegage.jpeg │     │                │   │ doc.txt.enc│                │
+                    │                                 │     │                │   │            │                │
+                    │                                 │     │                │   │            │                │
+                    │                                 │     │                │   │            │                │
+                    │                                 │     │                │   └────────────┘                │
+                    │                                 ├─────┘                │                                 │
+                    │                                 │                      └─────────────────────────────────┘
+                    │                                 │
+                    │                                 │
+                    │                                 │
+                    └─────────────────────────────────┘
 
 
 The supported image formats for embedding are `jpeg` and `png`. The resulting image format is always `png`.
 
-## decode
+### decode
 
 **stegage** extracts the encrypted file from the embedding image and decrypts it. 
 
@@ -61,9 +59,9 @@ The supported image formats for embedding are `jpeg` and `png`. The resulting im
     └─────────────────────────────────┘
 
 
-# Usage
+## Usage
 
-## encode 
+### encode 
 
 Encrypt the file `doc.txt` and embed the encrypted payload in a copy of
 `stegage.png`.  Save the copy to the file `stegage_encoded.png`. 
@@ -74,7 +72,7 @@ Encrypt the file `doc.txt` and embed the encrypted payload in a copy of
 
 
 
-## decode
+### decode
 
 Extract the encrypted payload from the file `stegage_encoded.png` and decrypt
 it. Save the decrypted payload to the file `doc.txt` 
@@ -83,16 +81,16 @@ it. Save the decrypted payload to the file `doc.txt`
     Enter passphrase:
 
 
-# Installation
+## Installation
 
 If your system has Go 1.17+:
 
     go install github.com/revelaction/stegage/cmd...@v0.5.0-beta
 
  
-# Library Usage
+## Library Usage
 
-## encode
+### encode
 
     // error handling omitted for brevity. See ./cmd/stegage/main.go for a real example
 	image, _ := os.Open(image.png) 
@@ -106,7 +104,7 @@ If your system has Go 1.17+:
         fmt.Printf("stegage: error encoding: %v", err)
 	}
 
-## decode
+### decode
 
 	imageEncoded, _ := os.Open(image_encoded.png)
 	passphrase := strings.NewReader("aj4@7%8821vja")
@@ -116,7 +114,7 @@ If your system has Go 1.17+:
         fmt.Printf("stegage: error decoding: %v", err)
 	}
 
-# Bash Completion
+## Bash Completion
 
 `stegage` has builtin bash autocompletion. You can enable it by putting the following bash
 snippet in your `.bashrc` file:
