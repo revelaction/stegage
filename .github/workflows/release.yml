@@ -15,9 +15,10 @@ jobs:
         goarch: [amd64]
     steps:
       - uses: actions/checkout@v2
-      - uses: wangyoucao577/go-release-action@v1.22
+      - uses: wangyoucao577/go-release-action@latest
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           goos: ${{ matrix.goos }}
           goarch: ${{ matrix.goarch }}    
           goversion: latest
+          project_path: "./cmd/stegage"
