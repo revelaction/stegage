@@ -3,9 +3,6 @@ package stegage_test
 import (
 	"bytes"
 	"encoding/base64"
-	"fmt"
-	"log"
-	"os"
 	"strings"
 	"testing"
 
@@ -20,8 +17,6 @@ const pikeCoxJpeg = `/9j/4AAQSkZJRgABAQIAHAAcAAD/2wBDABALDA4MChAODQ4SERATGCgaGBY
 
 const password = "73vb$#%51vf89vav9g&*%($C"
 const data = "Lorem ipsum dolor sit amet"
-
-var imgFile = "./testdata/cloudy-mountain.jpg"
 
 func TestEncodeDecode(t *testing.T) {
 
@@ -140,22 +135,4 @@ func TestDecodeNotSupportedImageFormat(t *testing.T) {
 	if err := stegage.Decode(passR, notImageR, out); err == nil {
 		t.Fatal("Uncaught error: Not supported Image")
 	}
-}
-
-func aExampleEncode() {
-	imageR, err := os.Open(imgFile)
-	if err != nil {
-		log.Fatalf("Failed to open file: %v", err)
-	}
-
-	passR := strings.NewReader(password)
-	dataR := strings.NewReader(data)
-	outEnc := new(bytes.Buffer)
-
-	if err := stegage.Encode(passR, dataR, imageR, outEnc); err != nil {
-		log.Fatalf("Failed to encode: %v", err)
-	}
-
-	fmt.Println(data)
-	// Output: Lorem ipsum dolor sit amet
 }
