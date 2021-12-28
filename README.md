@@ -90,9 +90,16 @@ it. Save the decrypted payload to the file `doc.txt`
 
 ## Installation
 
+### Official binary Releases
+
+You can download the latest release versions of stegage from the [stegage
+release page.](https://github.com/revelaction/stegage/releases/)
+
+
+### Build from source
 If your system has Go 1.17+:
 
-    go install github.com/revelaction/stegage/cmd...@v0.5.0-beta
+    go install github.com/revelaction/stegage/cmd...@v0.6.2-beta
 
  
 ## Library Usage
