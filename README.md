@@ -1,7 +1,6 @@
-## stegage
 
 **stegage** is a simple command line tool and Go library to both encrypt
-(with [age](https://age-encryption.org/v1)) and conceal
+(with [age](https://github.com/FiloSottile/age)) and conceal
 (with [steganography](https://github.com/auyer/steganography)) a file.
 
 
