@@ -17,25 +17,25 @@
 encrypted file inside an image (f.ex. `stegage.jpeg`. The resulting image `stegage_encoded.png` is
 visually identical to the original image `stegage.jpeg`.
 
-    ┌────────────┐                       ┌────────────┐
-    │    doc.txt │        encrypt        │ doc.txt.enc│
-    │            ├──────────────────────►│            ├─────┐
-    │            │                       │            │     │                ┌─────────────────────────────────┐
-    │            │                       │            │     │                │              stegage_encoded.png│
-    └────────────┘                       └────────────┘     │                │                                 │
-                                                            │ steganography  │                                 │
-                    ┌─────────────────────────────────┐     ├───────────────►│   ┌────────────┐                │
-                    │                    stegage.jpeg │     │                │   │ doc.txt.enc│                │
-                    │                                 │     │                │   │            │                │
-                    │                                 │     │                │   │            │                │
-                    │                                 │     │                │   │            │                │
-                    │                                 │     │                │   └────────────┘                │
-                    │                                 ├─────┘                │                                 │
-                    │                                 │                      └─────────────────────────────────┘
-                    │                                 │
-                    │                                 │
-                    │                                 │
-                    └─────────────────────────────────┘
+    ┌────────────┐              ┌────────────┐
+    │    doc.txt │    encrypt   │ doc.txt.enc│
+    │            ├─────────────►│            ├────┐
+    │            │              │            │    │          ┌─────────────────────────────────┐
+    │            │              │            │    │          │              stegage_encoded.png│
+    └────────────┘              └────────────┘    │  stegano │                                 │
+                                                  │  graphy  │                                 │
+              ┌─────────────────────────────────┐ ├─────────►│   ┌────────────┐                │
+              │                    stegage.jpeg │ │          │   │ doc.txt.enc│                │
+              │                                 │ │          │   │            │                │
+              │                                 │ │          │   │            │                │
+              │                                 │ │          │   │            │                │
+              │                                 │ │          │   └────────────┘                │
+              │                                 ├─┘          │                                 │
+              │                                 │            └─────────────────────────────────┘
+              │                                 │
+              │                                 │
+              │                                 │
+              └─────────────────────────────────┘
 
 
 The supported image formats for embedding are `jpeg` and `png`. The resulting image format is always `png`.
