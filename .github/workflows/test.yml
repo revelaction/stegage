@@ -1,5 +1,12 @@
 name: Go tests
-on: [push, pull_request]
+on:
+  # run tests on push to master, but not when other branches are pushed to
+  push:
+    branches:
+      - main
+  # run tests for all pull requests
+  pull_request:
+
 permissions:
   contents: read
 jobs:
