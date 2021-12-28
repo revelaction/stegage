@@ -8,6 +8,9 @@
 | -------------------- | ------------------|
 | ![Original File](testdata/stegage.jpeg)  | ![Encoded File](testdata/stegage_encoded.png)
 
+
+![test](https://github.com/revelaction/stegage/actions/workflows/test.yml/badge.svg)
+
 ## How it works
 
 ### encode
