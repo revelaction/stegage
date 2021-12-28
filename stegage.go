@@ -81,8 +81,8 @@ func Encode(password, data, image io.Reader, out io.Writer) error {
 	return nil
 }
 
-// Decode extract a encrypted payload of an png image and decrypts the payload
-// with the password.
+// Decode extracts the encrypted payload of a png image and decrypts the payload
+// with the given password.
 func Decode(password, image io.Reader, out io.Writer) error {
 
 	r := bufio.NewReader(image)
