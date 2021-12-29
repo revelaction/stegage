@@ -24,4 +24,4 @@ jobs:
           goarch: ${{ matrix.goarch }}    
           goversion: latest
           project_path: "./cmd/stegage"
-          ldflags: -X "main.buildcommit=${{ github.sha }}" -X "main.buildtag=${{ env.APP_TAG}}"
+          ldflags: -X "main.BuildCommit=${{ github.sha }}" -X "main.BuildTag=${{ env.APP_TAG}}"

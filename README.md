@@ -99,7 +99,7 @@ release page.](https://github.com/revelaction/stegage/releases/)
 ### Build from source
 If your system has Go 1.17+:
 
-    go install github.com/revelaction/stegage/cmd...@v0.6.2-beta
+    go install github.com/revelaction/stegage/cmd...@v0.7.1-beta
 
  
 ## Library Usage
