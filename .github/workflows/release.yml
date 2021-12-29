@@ -15,6 +15,8 @@ jobs:
         goarch: [amd64]
     steps:
       - uses: actions/checkout@v2
+      - name: Set APP_TAG env
+        run: echo APP_TAG=$(echo ${GITHUB_REF} | rev | cut -d'/' -f 1 | rev ) >> ${GITHUB_ENV}
       - uses: wangyoucao577/go-release-action@v1.22
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -22,3 +24,4 @@ jobs:
           goarch: ${{ matrix.goarch }}    
           goversion: latest
           project_path: "./cmd/stegage"
+          ldflags: -X "main.buildcommit=${{ github.sha }}" -X "main.buildtag=${{ env.APP_TAG}}"
