@@ -31,8 +31,8 @@ jobs:
           VERSION="$(git describe --tags)"
           DIR="$(mktemp -d)"
           mkdir "$DIR/stegage"
-          go build -o "$DIR/mankidown" -ldflags "-X main.Version=$VERSION" -trimpath ./cmd/...
-          tar -cvzf "mankidown-$VERSION-$GOOS-$GOARCH.tar.gz" -C "$DIR" stegage  
+          go build -o "$DIR/stegage" -ldflags "-X main.Version=$VERSION" -trimpath ./cmd/...
+          tar -cvzf "stegage-$VERSION-$GOOS-$GOARCH.tar.gz" -C "$DIR" stegage  
         env:
           CGO_ENABLED: 0
           GOOS: ${{ matrix.GOOS }}
