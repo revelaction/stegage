@@ -124,20 +124,23 @@ err := stegage.Encode(passphrase, data, image, out); err != nil {
 ```
 ### decode
 
-	imageEncoded, _ := os.Open(image_encoded.png)
-	passphrase := strings.NewReader("aj4@7%8821vja")
-    out, _ := os.Create("doc.txt") 
+```go
+imageEncoded, _ := os.Open(image_encoded.png)
+passphrase := strings.NewReader("aj4@7%8821vja")
+out, _ := os.Create("doc.txt") 
 
-	err := stegage.Decode(passphrase, imageEncoded, out); err != nil {
-        fmt.Printf("stegage: error decoding: %v", err)
-	}
+err := stegage.Decode(passphrase, imageEncoded, out); err != nil {
+	fmt.Printf("stegage: error decoding: %v", err)
+}
+```
 
 ## Bash Completion
 
 `stegage` has builtin bash autocompletion. You can enable it by putting the following bash
 snippet in your `.bashrc` file:
 
-    if hash stegage; then
-        PROG=stegage source <(stegage bash)
-    fi
-
+```console
+if hash stegage; then
+	PROG=stegage source <(stegage bash)
+fi
+```
