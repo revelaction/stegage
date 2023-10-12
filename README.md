@@ -73,7 +73,7 @@ The supported image formats for embedding are `jpeg` and `png`. The resulting im
 Encrypt the file `doc.txt` and embed the encrypted payload in a copy of
 `stegage.png`.  Save the copy to the file `stegage_encoded.png`. 
 
-```console
+```bash
 ⤷ stegage encode --inside stegage.png doc.txt > stegage_encoded.png 
 Enter passphrase:
 Confirm passphrase:
