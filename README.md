@@ -1,9 +1,10 @@
 ## stegage
 
-
 [![Go Reference](https://pkg.go.dev/badge/github.com/revelaction/stegage)](https://pkg.go.dev/github.com/revelaction/stegage)
 ![test](https://github.com/revelaction/stegage/actions/workflows/test.yml/badge.svg)
 
+
+<p align="center"><img alt="stegage" src="./logo.png"/></p>
 
 **stegage** is a simple command line tool and Go library to both encrypt
 (with [age](https://github.com/FiloSottile/age)) and conceal
