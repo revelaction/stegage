@@ -9,7 +9,7 @@ import (
 	"os"
 	"runtime"
 
-    "github.com/revelaction/stegage"
+	"github.com/revelaction/stegage"
 	"github.com/urfave/cli/v2"
 	"golang.org/x/term"
 )
@@ -102,7 +102,7 @@ func main() {
 func encodeAction(ctx *cli.Context) error {
 
 	if ctx.Args().Len() > 1 {
-        cli.ShowAppHelp(ctx)
+		cli.ShowAppHelp(ctx)
 		return fmt.Errorf("Max number of arguments is 1")
 	}
 
@@ -152,7 +152,7 @@ func encodeAction(ctx *cli.Context) error {
 func decodeAction(ctx *cli.Context) error {
 
 	if ctx.Args().Len() > 1 {
-        cli.ShowAppHelp(ctx)
+		cli.ShowAppHelp(ctx)
 		return fmt.Errorf("Max number of arguments is 1")
 	}
 

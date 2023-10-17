@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-    "github.com/revelaction/stegage"
+	"github.com/revelaction/stegage"
 )
 
 // From https://pkg.go.dev/image/png@go1.17.5#example-Decode
