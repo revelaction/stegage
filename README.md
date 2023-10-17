@@ -142,3 +142,22 @@ if hash stegage; then
 	PROG=stegage source <(stegage bash)
 fi
 ```
+## Command line options
+
+```console
+⤷ stegage help
+NAME:
+   stegage - encrypt and conceal (steganography) a file
+
+USAGE:
+   stegage [global options] command [command options] [arguments...]
+
+COMMANDS:
+   encode, e  Encrypt a file with age and additionally conceal with steganography
+   decode, d  Decrypt an age encrypted file inside of an image file
+   bash       Dump bash complete script
+   help, h    Shows a list of commands or help for one command
+
+GLOBAL OPTIONS:
+   --help, -h  show help (default: false)
+```
