@@ -2,7 +2,7 @@
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/revelaction/stegage)](https://pkg.go.dev/github.com/revelaction/stegage)
 ![test](https://github.com/revelaction/stegage/actions/workflows/test.yml/badge.svg)
-<a href="https://goreportcard.com/report/report/github.com/revelaction/stegage"><img src="https://goreportcard.com/report/github.com/revelaction/stegage" alt="Code Status" /></a>
+<a href="https://goreportcard.com/report/github.com/revelaction/stegage"><img src="https://goreportcard.com/report/github.com/revelaction/stegage" alt="Code Status" /></a>
 
 
 **stegage** is a simple command line tool and Go library to both encrypt
