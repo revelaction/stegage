@@ -2,7 +2,8 @@
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/revelaction/stegage)](https://pkg.go.dev/github.com/revelaction/stegage)
 ![test](https://github.com/revelaction/stegage/actions/workflows/test.yml/badge.svg)
-[![Go Report Card](https://goreportcard.com/badge/github.com/revelaction/stegage)](https://goreportcard.com/report/github.com/revelaction/stegage)
+<a href="https://goreportcard.com/report/report/github.com/revelaction/stegage"><img src="https://goreportcard.com/report/github.com/revelaction/stegage" alt="Code Status" /></a>
+
 
 **stegage** is a simple command line tool and Go library to both encrypt
 (with [age](https://github.com/FiloSottile/age)) and conceal
