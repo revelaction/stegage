@@ -8,7 +8,7 @@
 
 
 
-**stegage** is a simple command line tool and Go library to both encrypt
+**stegage** is a command line tool and Go library to both encrypt
 (with [age](https://github.com/FiloSottile/age)) and conceal
 (with [steganography](https://github.com/auyer/steganography)) a file.
 
