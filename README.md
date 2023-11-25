@@ -5,6 +5,7 @@
 [![Build](https://github.com/revelaction/stegage/actions/workflows/build.yml/badge.svg)](https://github.com/revelaction/stegage/actions/workflows/build.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/revelaction/stegage)](https://goreportcard.com/report/github.com/revelaction/stegage)
 [![GitHub Release](https://img.shields.io/github/v/release/revelaction/stegage?style=flat)]() 
+[![GitHub Release](https://img.shields.io/badge/built_with-Go-00ADD8.svg?style=flat)]() 
 
 
 
